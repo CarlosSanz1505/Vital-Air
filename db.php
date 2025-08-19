@@ -2,7 +2,7 @@
 $host = "localhost";
 $usuario = "root";
 $clave = "";
-$bd = "vital air";
+$bd = "vital_air";
 
 $conn = new mysqli($host, $usuario, $clave, $bd);
 
