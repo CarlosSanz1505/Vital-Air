@@ -314,3 +314,64 @@ transition: background 0.3s;
 .btn-blue:hover {
 background: #3684a3;
 }
+
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+background: #f4f8fa;
+}
+
+.login-container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.login-box {
+background: white;
+padding: 40px 30px;
+border-radius: 12px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+text-align: center;
+width: 320px;
+}
+
+.logo {
+width: 120px;   /* más grande */
+margin: 0 auto 15px auto; /* centrado */
+display: block;
+}
+
+.login-box h1 {
+margin-bottom: 20px;
+font-size: 26px;
+color: #333;
+}
+
+.login-box input {
+width: 100%;
+padding: 12px;
+margin: 8px 0;
+border-radius: 8px;
+border: 1px solid #ccc;
+font-size: 14px;
+}
+
+.login-box button {
+width: 100%;
+padding: 12px;
+margin-top: 15px;
+border: none;
+border-radius: 25px;
+background: #4fb0d9;
+color: white;
+font-size: 16px;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+
+.login-box button:hover {
+background: #3997bd;
+}
