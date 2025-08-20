@@ -1,6 +1,6 @@
 # Vital-Air
 
-## Pasos
+## Uso para dev
 
 1. Ejecutar SQL en `localhost/phpmyadmin`:
 
