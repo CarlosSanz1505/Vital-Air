@@ -1,7 +1,7 @@
 <?php
-$host = "localhost";
-$usuario = "root";
-$clave = "";
+$host = "db-vital-air4.cwoblbi6fart.us-east-1.rds.amazonaws.com";
+$usuario = "admin";
+$clave = "password";
 $bd = "vital_air";
 
 $conn = new mysqli($host, $usuario, $clave, $bd);
