@@ -13,9 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($conn, $query);
     $user = mysqli_fetch_assoc($result);
 
+    $page = ($user['rol'] == 'admin') ? 'admin.php' : 'info.php';
     if ($user && password_verify($clave, $user["clave"])) {
         $_SESSION["nombre"] = $user["nombre"];
-        header("Location: info.php");
+        header("Location: $page");
         exit();
     } else {
         $error = "Nombre o contraseña incorrectos.";
@@ -24,17 +25,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VitalAir - Login</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form action="" method="post">
-        <input type="text" name="nombre" required>
-        <input type="text" name="clave" required>
-        <button type="submit">Ingresar</button>
-    </form>
+    <div class="login-container">
+        <div class="login-box">
+        <img src="logo.png" alt="VitalAir Logo" class="logo">
+        <form method="POST" id="loginForm">
+            <input type="text" name="nombre" placeholder="Username" required>
+            <input type="password" name="clave" placeholder="Contraseña" required>
+            <button type="submit">INICIAR SESIÓN</button>
+        </form>
+        </div>
+    </div>
 </body>
 </html>

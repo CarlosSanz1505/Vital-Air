@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST["nombre"];
     $clave = password_hash($_POST["clave"], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO usuarios (nombre, clave) VALUES ('$nombre', '$clave');";
+    $sql = "INSERT INTO usuarios (nombre, clave, rol) VALUES ('$nombre', '$clave', 'admin');";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: login.php");

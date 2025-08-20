@@ -114,3 +114,7 @@ cursor: pointer;
 border-radius: 5px;
 float: right;
 }
+
+input.action {
+    display: none;
+}
